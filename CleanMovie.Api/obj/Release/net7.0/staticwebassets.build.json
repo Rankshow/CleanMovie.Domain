@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KWihRT6IuNKB/xnbPg7EBhd1eGUQ9+5CIWPNRDps5tc=",
+  "Source": "CleanMovie.Api",
+  "BasePath": "_content/CleanMovie.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

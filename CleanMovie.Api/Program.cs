@@ -1,5 +1,7 @@
-using CleanMovie.Application;
-using CleanMovie.Infrastructure;
+using CleanMovie.Application.Implementation;
+using CleanMovie.Application.Interface;
+using CleanMovie.Infrastructure.Data;
+using CleanMovie.Infrastructure.Implementation;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,11 +1,10 @@
 ﻿using CleanMovie.Domain;
 
-
-namespace CleanMovie.Application
+namespace CleanMovie.Application.Interface
 {
-    public interface IMovieService
+    public interface IMovieRepository
     {
-        List<Movie> GetAllMovies(); 
+        List<Movie> GetAllMovies();
         Movie CreateMovie(Movie movie);
         bool Delete(int movieId);
         Movie GetById(int movieId);

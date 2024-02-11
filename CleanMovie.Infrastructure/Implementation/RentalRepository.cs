@@ -1,21 +1,22 @@
-﻿using CleanMovie.Application;
+﻿using CleanMovie.Application.Interface;
 using CleanMovie.Domain;
+using CleanMovie.Infrastructure.Data;
 
-namespace CleanMovie.Infrastructure
+namespace CleanMovie.Infrastructure.Implementation
 {
     public class RentalRepository : IRentalRepository
     {
         private readonly MovieDbContext _movieDbContext;
         public RentalRepository(MovieDbContext movieDbContext)
         {
-            _movieDbContext = movieDbContext;   
+            _movieDbContext = movieDbContext;
         }
 
         public Rental CreateRental(Rental rental)
         {
             _movieDbContext.Rentals.Add(rental);
             _movieDbContext.SaveChanges();
-            return rental;  
+            return rental;
         }
 
         public List<Rental> GetAllRental()

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CleanMovie.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99dad7cbc7d2cfdc26c6093f8b2a343a773bac07")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleanMovie.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleanMovie.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

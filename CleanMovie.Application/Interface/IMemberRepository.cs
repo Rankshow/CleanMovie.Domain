@@ -1,8 +1,8 @@
 ﻿using CleanMovie.Domain;
 
-namespace CleanMovie.Application
+namespace CleanMovie.Application.Interface
 {
-    public interface IMemberService
+    public interface IMemberRepository
     {
         List<Member> GetAllMember();
         Member CreateMember(Member member);

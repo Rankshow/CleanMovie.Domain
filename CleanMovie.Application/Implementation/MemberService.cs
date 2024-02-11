@@ -1,6 +1,7 @@
-﻿using CleanMovie.Domain;
+﻿using CleanMovie.Application.Interface;
+using CleanMovie.Domain;
 
-namespace CleanMovie.Application
+namespace CleanMovie.Application.Implementation
 {
     public class MemberService : IMemberService
     {

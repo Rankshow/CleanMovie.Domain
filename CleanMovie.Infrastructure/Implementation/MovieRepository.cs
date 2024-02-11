@@ -1,8 +1,9 @@
-﻿using CleanMovie.Application;
+﻿using CleanMovie.Application.Interface;
 using CleanMovie.Domain;
+using CleanMovie.Infrastructure.Data;
 
 
-namespace CleanMovie.Infrastructure
+namespace CleanMovie.Infrastructure.Implementation
 {
     public class MovieRepository : IMovieRepository
     {
@@ -28,8 +29,8 @@ namespace CleanMovie.Infrastructure
         public bool Delete(int movieId)
         {
             var deleteMovie = _movieDbContext.Movies.FirstOrDefault(x => x.MovieId == movieId);
-            _movieDbContext.Remove( deleteMovie ?? new Movie() );
-            _movieDbContext.SaveChanges(); 
+            _movieDbContext.Remove(deleteMovie ?? new Movie());
+            _movieDbContext.SaveChanges();
             return true;
         }
 
@@ -40,9 +41,9 @@ namespace CleanMovie.Infrastructure
 
         public Movie GetById(int movieId)
         {
-            var getMovie = _movieDbContext.Movies.FirstOrDefault( x => x.MovieId == movieId);
+            var getMovie = _movieDbContext.Movies.FirstOrDefault(x => x.MovieId == movieId);
             _movieDbContext.SaveChanges();
-            return getMovie ?? new Movie(); 
+            return getMovie ?? new Movie();
         }
 
         public Movie Update(Movie movie)

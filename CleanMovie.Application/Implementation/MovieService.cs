@@ -1,7 +1,8 @@
-﻿using CleanMovie.Domain;
+﻿using CleanMovie.Application.Interface;
+using CleanMovie.Domain;
 
 
-namespace CleanMovie.Application
+namespace CleanMovie.Application.Implementation
 {
     public class MovieService : IMovieService
     {
@@ -26,12 +27,12 @@ namespace CleanMovie.Application
         public List<Movie> GetAllMovies()
         {
             var movies = _movieRepository.GetAllMovies();
-            return movies;  
+            return movies;
         }
 
         public Movie GetById(int movieId)
         {
-            return _movieRepository.GetById(movieId);   
+            return _movieRepository.GetById(movieId);
         }
 
         public Movie Update(Movie movie)

@@ -1,10 +1,10 @@
 ﻿using CleanMovie.Domain;
 
-namespace CleanMovie.Application
+namespace CleanMovie.Application.Interface
 {
     public interface IRentalService
     {
         List<Rental> GetAllRental();
-        Rental CreateRental( Rental rental );
+        Rental CreateRental(Rental rental);
     }
 }

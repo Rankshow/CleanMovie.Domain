@@ -10,4 +10,8 @@
     <ProjectReference Include="..\CleanMovie.Domain\CleanMovie.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dto\Member\" />
+  </ItemGroup>
+
 </Project>

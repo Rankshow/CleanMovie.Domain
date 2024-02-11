@@ -9,7 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanMovie.Application", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanMovie.Infrastructure", "CleanMovie.Infrastructure\CleanMovie.Infrastructure.csproj", "{1AA51E83-37DB-4F51-93C5-D1C1BAB1505A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanMovie.Api", "CleanMovie.Api\CleanMovie.Api.csproj", "{D16B4F81-8ECD-4E93-8AFF-92A4AD884FF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanMovie.Api", "CleanMovie.Api\CleanMovie.Api.csproj", "{D16B4F81-8ECD-4E93-8AFF-92A4AD884FF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{27685620-D926-4676-A44C-C50014ABDAAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{14B674D3-2595-48B5-BF09-35EF65B6DC98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastucture", "Infrastucture", "{37306A38-CB84-4E94-B757-5455C8AE3236}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{BDDB4E67-B9E5-49D3-9BD7-D3BFF7995704}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +44,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6246486-EFB1-42CA-8FD4-3CC14622E938} = {27685620-D926-4676-A44C-C50014ABDAAD}
+		{093F6322-BFB8-4C64-894F-E39A75A2DD48} = {14B674D3-2595-48B5-BF09-35EF65B6DC98}
+		{1AA51E83-37DB-4F51-93C5-D1C1BAB1505A} = {37306A38-CB84-4E94-B757-5455C8AE3236}
+		{D16B4F81-8ECD-4E93-8AFF-92A4AD884FF9} = {BDDB4E67-B9E5-49D3-9BD7-D3BFF7995704}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E730284-25E9-48AD-9246-BE9B7CA9F089}

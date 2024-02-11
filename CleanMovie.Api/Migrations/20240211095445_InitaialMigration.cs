@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CleanMovie.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class AddedMovieRentalsMembers : Migration
+    public partial class InitaialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,7 +30,7 @@ namespace CleanMovie.Api.Migrations
                 name: "Rentals",
                 columns: table => new
                 {
-                    RentalId = table.Column<int>(type: "int", nullable: false)
+                    MemberId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RentalDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     RentalExpiry = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -38,7 +38,7 @@ namespace CleanMovie.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Rentals", x => x.RentalId);
+                    table.PrimaryKey("PK_Rentals", x => x.MemberId);
                 });
 
             migrationBuilder.CreateTable(
@@ -47,8 +47,7 @@ namespace CleanMovie.Api.Migrations
                 {
                     MemberId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RentalId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -59,7 +58,7 @@ namespace CleanMovie.Api.Migrations
                         name: "FK_Members_Rentals_RentalId",
                         column: x => x.RentalId,
                         principalTable: "Rentals",
-                        principalColumn: "RentalId",
+                        principalColumn: "MemberId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -69,7 +68,7 @@ namespace CleanMovie.Api.Migrations
                 {
                     RenatalId = table.Column<int>(type: "int", nullable: false),
                     MovieId = table.Column<int>(type: "int", nullable: false),
-                    RentalId = table.Column<int>(type: "int", nullable: true)
+                    RentalMemberId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -81,10 +80,10 @@ namespace CleanMovie.Api.Migrations
                         principalColumn: "MovieId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MovieRentals_Rentals_RentalId",
-                        column: x => x.RentalId,
+                        name: "FK_MovieRentals_Rentals_RentalMemberId",
+                        column: x => x.RentalMemberId,
                         principalTable: "Rentals",
-                        principalColumn: "RentalId");
+                        principalColumn: "MemberId");
                 });
 
             migrationBuilder.CreateIndex(
@@ -98,9 +97,9 @@ namespace CleanMovie.Api.Migrations
                 column: "MovieId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MovieRentals_RentalId",
+                name: "IX_MovieRentals_RentalMemberId",
                 table: "MovieRentals",
-                column: "RentalId");
+                column: "RentalMemberId");
         }
 
         /// <inheritdoc />

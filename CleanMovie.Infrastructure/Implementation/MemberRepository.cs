@@ -1,15 +1,16 @@
-﻿using CleanMovie.Application;
+﻿using CleanMovie.Application.Interface;
 using CleanMovie.Domain;
+using CleanMovie.Infrastructure.Data;
 
-namespace CleanMovie.Infrastructure
+namespace CleanMovie.Infrastructure.Implementation
 {
     public class MemberRepository : IMemberRepository
     {
-        private readonly MovieDbContext _movieDbContext; 
+        private readonly MovieDbContext _movieDbContext;
         public MemberRepository(MovieDbContext movieDbContext)
         {
 
-            _movieDbContext = movieDbContext;   
+            _movieDbContext = movieDbContext;
 
         }
         public Member CreateMember(Member member)
@@ -25,8 +26,8 @@ namespace CleanMovie.Infrastructure
         }
         public bool Delete(int memberId)
         {
-            var deleteMember = _movieDbContext.Members.FirstOrDefault( x => x.MemberId == memberId);
-            _movieDbContext.Members.Remove( deleteMember ?? new Member());
+            var deleteMember = _movieDbContext.Members.FirstOrDefault(x => x.MemberId == memberId);
+            _movieDbContext.Members.Remove(deleteMember ?? new Member());
             _movieDbContext.SaveChanges();
             return true;
         }

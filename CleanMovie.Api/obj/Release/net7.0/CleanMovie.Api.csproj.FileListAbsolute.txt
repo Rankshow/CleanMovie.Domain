@@ -79,3 +79,4 @@ C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Api\obj\Release\net7.0\r
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Api\obj\Release\net7.0\CleanMovie.Api.pdb
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Api\obj\Release\net7.0\CleanMovie.Api.genruntimeconfig.cache
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Api\obj\Release\net7.0\ref\CleanMovie.Api.dll
+C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Api\obj\Release\net7.0\CleanMovie.Api.sourcelink.json

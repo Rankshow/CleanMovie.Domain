@@ -13,3 +13,4 @@ C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Application\obj\Release\
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Application\obj\Release\net7.0\refint\CleanMovie.Application.dll
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Application\obj\Release\net7.0\CleanMovie.Application.pdb
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Application\obj\Release\net7.0\ref\CleanMovie.Application.dll
+C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Application\obj\Release\net7.0\CleanMovie.Application.sourcelink.json

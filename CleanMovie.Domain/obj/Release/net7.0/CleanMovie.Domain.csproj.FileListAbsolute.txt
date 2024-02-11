@@ -9,3 +9,4 @@ C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Domain\obj\Release\net7.
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Domain\obj\Release\net7.0\refint\CleanMovie.Domain.dll
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Domain\obj\Release\net7.0\CleanMovie.Domain.pdb
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Domain\obj\Release\net7.0\ref\CleanMovie.Domain.dll
+C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Domain\obj\Release\net7.0\CleanMovie.Domain.sourcelink.json

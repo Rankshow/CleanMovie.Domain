@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CleanMovie.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bcfcf0266864676aafff4c0b1160570ec5cd1f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleanMovie.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleanMovie.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

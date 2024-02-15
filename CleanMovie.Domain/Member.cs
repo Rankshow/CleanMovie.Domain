@@ -1,7 +1,7 @@
 ﻿
 namespace CleanMovie.Domain
 {
-    public class Member
+    public class Member : BaseEntity
     {
         public int MemberId { get; set; }      
         public string Name { get; set; } = string.Empty;

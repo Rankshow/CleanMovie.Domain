@@ -1,9 +1,8 @@
-﻿namespace CleanMovie.Domain.Dto
+﻿namespace CleanMovie.Application.Contract.Dto
 {
-    public class GenericResponse<T>
+    public class BaseResponse
     {
         public string Code { get; set; } = string.Empty;
         public string Message { get; set; } = string.Empty;
-        public T? Result { get; set; }
     }
 }

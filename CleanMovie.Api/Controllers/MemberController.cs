@@ -17,16 +17,16 @@ namespace CleanMovie.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Member>> GetAllMember() 
+        public ActionResult<List<Member>> GetAll() 
         {
-            var memberFromService = _service.GetAllMember();
-            return Ok(memberFromService);
+            var allMovies = _service.GetAll();  
+            return Ok(allMovies);
         }
 
         [HttpPost]
-        public ActionResult<Member> PostMember(Member member) 
+        public ActionResult<Member> Create(Member member) 
         {
-            var addMember = _service.CreateMember(member);
+            var addMember = _service.Create(member);
             return Ok(addMember);
         }
 
@@ -38,20 +38,20 @@ namespace CleanMovie.Api.Controllers
             return Ok(deleteMember);    
         }
 
-        /*[HttpGet]
-        [Route("{movieId}")]
-        public ActionResult<bool> GetById(int MemberId) 
+        [HttpGet]
+        [Route("{memberId:int}")]
+        public ActionResult<bool> GetById(int memberId) 
         {
-            _service.GetById(MemberId);
-            return Ok();    
+            var addId = _service.GetById(memberId);
+            return Ok(addId);    
         }
 
         [HttpPut]
-        [Route("movie")]
+        [Route("member")]
         public ActionResult<Member> Update(Member member) 
         { 
             var update = _service.Update(member);
             return Ok(update);
-        }*/
+        }
     }
 }

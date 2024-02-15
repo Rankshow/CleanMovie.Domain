@@ -1,4 +1,5 @@
-﻿using CleanMovie.Application.Interface;
+﻿using CleanMovie.Application.Contract.Dto.Movies;
+using CleanMovie.Application.Interface;
 using CleanMovie.Domain;
 
 namespace CleanMovie.Application.Implementation
@@ -10,13 +11,13 @@ namespace CleanMovie.Application.Implementation
         {
             _memberRepository = memberRepository;
         }
-        public Member CreateMember(Member member)
+        public Member Create(Member member)
         {
             _memberRepository.CreateMember(member);
             return member;
         }
 
-        public List<Member> GetAllMember()
+        public List<Member> GetAll()
         {
             return _memberRepository.GetAllMember();
         }
@@ -25,9 +26,7 @@ namespace CleanMovie.Application.Implementation
             var deleteMember = _memberRepository.Delete(memberId);
             return deleteMember;
         }
-
-
-        /*public Member GetById(int MemberId)
+        public Member GetById(int MemberId)
         {
             return _memberRepository.GetById(MemberId);
         }
@@ -35,6 +34,6 @@ namespace CleanMovie.Application.Implementation
         public Member Update(Member member)
         {
             return _memberRepository.Update(member);
-        }*/
+        }
     }
 }

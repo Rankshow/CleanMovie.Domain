@@ -1,6 +1,6 @@
 ﻿namespace CleanMovie.Domain
 {
-    public class Rental
+    public class Rental : BaseEntity    
     {
         public int MemberId { get; set; } 
         public DateTime RentalDate { get; set; }

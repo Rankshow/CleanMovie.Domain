@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CleanMovie.Domain.Dto.Movies
+﻿namespace CleanMovie.Application.Contract.Dto.Movies
 {
     public class MovieDto
     {

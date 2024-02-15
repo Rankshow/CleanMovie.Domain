@@ -41,5 +41,4 @@ namespace CleanMovie.Infrastructure.Data
         public DbSet<MovieRental> MovieRentals { get; set; }
 
     }
-
 }

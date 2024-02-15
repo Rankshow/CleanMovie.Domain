@@ -1,6 +1,8 @@
-﻿using CleanMovie.Application.Interface;
+﻿using CleanMovie.Application.Contract.Dto.Movies;
+using CleanMovie.Application.Contract.Extension;
+using CleanMovie.Application.Interface;
 using CleanMovie.Domain;
-
+using System.Runtime.CompilerServices;
 
 namespace CleanMovie.Application.Implementation
 {
@@ -9,25 +11,25 @@ namespace CleanMovie.Application.Implementation
         private readonly IMovieRepository _movieRepository;
         public MovieService(IMovieRepository movieRepository)
         {
-            _movieRepository = movieRepository;
+            _movieRepository = movieRepository;          
         }
 
-        public Movie CreateMovie(Movie movie)
+        public Movie Create(Movie movie)
         {
-            _movieRepository.CreateMovie(movie);
+            _movieRepository.Create(movie);
             return movie;
         }
 
         public bool Delete(int movieId)
         {
-            var deleteMovie = _movieRepository.Delete(movieId);
-            return deleteMovie;
+           var deleleteMovie = _movieRepository.Delete(movieId);
+            return deleleteMovie;
         }
 
         public List<Movie> GetAllMovies()
         {
-            var movies = _movieRepository.GetAllMovies();
-            return movies;
+            var allMovies = _movieRepository.GetAll();
+            return allMovies;
         }
 
         public Movie GetById(int movieId)
@@ -37,8 +39,7 @@ namespace CleanMovie.Application.Implementation
 
         public Movie Update(Movie movie)
         {
-            _movieRepository.Update(movie);
-            return movie;
+            return _movieRepository.Update(movie);  
         }
     }
 }

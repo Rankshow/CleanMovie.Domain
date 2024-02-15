@@ -7,7 +7,7 @@ namespace CleanMovie.Application.Interface
         List<Member> GetAllMember();
         Member CreateMember(Member member);
         bool Delete(int memberId);
-        /*Member GetById(int MemberId);
-        Member Update(Member member);*/
+        Member GetById(int memberId);
+        Member Update(Member member);
     }
 }

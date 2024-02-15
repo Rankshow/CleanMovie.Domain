@@ -1,6 +1,6 @@
 ﻿namespace CleanMovie.Domain
 {
-    public class Movie
+    public class Movie : BaseEntity
     {
         public int MovieId { get; set; }
         public string MovieName { get; set; } = string.Empty;

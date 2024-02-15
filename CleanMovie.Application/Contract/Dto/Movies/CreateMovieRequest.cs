@@ -1,16 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace CleanMovie.Domain.Dto.Movies
+﻿namespace CleanMovie.Application.Contract.Dto.Movies
 {
-    public class MovieResponse
+    public class CreateMovieRequest
     {
-        [Required]
         public int MovieId { get; set; }
-        [Required]
         public string MovieName { get; set; } = string.Empty;
-        [Required]
         public decimal RentalCost { get; set; }
-        [Required]
         public int RentalDuration { get; set; }
     }
 }

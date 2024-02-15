@@ -1,11 +1,12 @@
-﻿using CleanMovie.Application.Interface;
+﻿using CleanMovie.Application.Contract.Dto.Movies;
+using CleanMovie.Application.Contract.Extension;
+using CleanMovie.Application.Interface;
 using CleanMovie.Domain;
 using CleanMovie.Infrastructure.Data;
 
-
 namespace CleanMovie.Infrastructure.Implementation
 {
-    public class MovieRepository : IMovieRepository
+    public class MovieRepository : IMovieRepository 
     {
         /*public static List<Movie> movies = new List<Movie>()
         {
@@ -19,29 +20,28 @@ namespace CleanMovie.Infrastructure.Implementation
             _movieDbContext = movieDbContext;
         }
 
-        public Movie CreateMovie(Movie movie)
+        public Movie Create(Movie movie)
         {
-            _movieDbContext.Movies.Add(movie);
+            _movieDbContext.Add(movie);
             _movieDbContext.SaveChanges();
-            return movie;
+            return movie;   
         }
 
         public bool Delete(int movieId)
         {
-            var deleteMovie = _movieDbContext.Movies.FirstOrDefault(x => x.MovieId == movieId);
-            _movieDbContext.Remove(deleteMovie ?? new Movie());
-            _movieDbContext.SaveChanges();
+            var deleteMovie = _movieDbContext.Movies.Where(p => p.MovieId == movieId);
+            _movieDbContext.Remove(deleteMovie);
             return true;
         }
 
-        public List<Movie> GetAllMovies()
+        public List<Movie> GetAll()
         {
             return _movieDbContext.Movies.ToList();
         }
 
         public Movie GetById(int movieId)
         {
-            var getMovie = _movieDbContext.Movies.FirstOrDefault(x => x.MovieId == movieId);
+            var getMovie = _movieDbContext.Movies.FirstOrDefault( p => p.MovieId == movieId);
             _movieDbContext.SaveChanges();
             return getMovie ?? new Movie();
         }

@@ -1,8 +1,8 @@
-﻿using CleanMovie.Application.Interface;
+﻿using CleanMovie.Application.Contract.Dto;
+using CleanMovie.Application.Contract.Dto.Movies;
+using CleanMovie.Application.Interface;
 using CleanMovie.Domain;
-using CleanMovie.Domain.Dto;
-using CleanMovie.Domain.Dto.Movies;
-using CleanMovie.Domain.Extension;
+//using CleanMovie.Domain.Extension;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -28,23 +28,17 @@ namespace CleanMovie.Api.Controllers
 
         [HttpGet]
         [Route("{movieId}")]
-        public ActionResult<GenericResponse<MovieDto>> GetById(int movieId)
+        public ActionResult<Movie> GetById(int movieId)
         {
-            /*var result = new GenericResponse<MovieDto>()
-            {
-                Code = "200",
-                Message = "Success",
-                Result = _service.GetById(movieId).MovieToMovieDto();
-            }*/
             var addId = _service.GetById(movieId);  
             return Ok(addId);
            
         }
       
         [HttpPost]
-        public ActionResult<Movie> PostMovie( Movie movie ) 
+        public ActionResult<Movie> Create( Movie movie ) 
         {
-            var addMovie = _service.CreateMovie( movie );
+            var addMovie = _service.Create( movie );
             return Ok( addMovie );
         }
 
@@ -57,7 +51,7 @@ namespace CleanMovie.Api.Controllers
         }
 
        [HttpPut]
-        [Route("{movie}")]
+       [Route("{movie}")]
         public ActionResult<Movie> Update( Movie movie ) 
         { 
             var movieUpdate = _service.Update( movie );

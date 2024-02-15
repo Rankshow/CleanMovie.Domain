@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanMovie.Domain\CleanMovie.Domain.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.16" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dto\Member\" />
+    <ProjectReference Include="..\CleanMovie.Domain\CleanMovie.Domain.csproj" />
   </ItemGroup>
 
 </Project>

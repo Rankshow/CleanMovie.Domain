@@ -31,11 +31,9 @@ namespace CleanMovie.Infrastructure.Implementation
             _movieDbContext.SaveChanges();
             return true;
         }
-
-
-        /*public Member GetById(int memberId)
+        public Member GetById(int memberId)
         {
-            var getMemberId = _movieDbContext.Members.FirstOrDefault( x => x.MemberId == MemberId );
+            var getMemberId = _movieDbContext.Members.FirstOrDefault( x => x.MemberId == memberId );
             _movieDbContext.SaveChanges();
             return getMemberId ?? new Member();
 
@@ -46,6 +44,6 @@ namespace CleanMovie.Infrastructure.Implementation
             var update = _movieDbContext.Members.FirstOrDefault( x => x.Equals(member) );
             _movieDbContext.Update(member);
             return update ?? new Member();
-        }*/
+        }
     }
 }

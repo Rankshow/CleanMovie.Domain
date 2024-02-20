@@ -1,4 +1,5 @@
 ﻿using CleanMovie.Application.Contract.Dto.Movies;
+using CleanMovie.Application.Contract.Dto.NewFolder;
 using CleanMovie.Domain;
 
 namespace CleanMovie.Application.Interface

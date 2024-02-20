@@ -24,11 +24,11 @@ namespace CleanMovie.Api.Migrations
 
             modelBuilder.Entity("CleanMovie.Domain.Member", b =>
                 {
-                    b.Property<int>("MemberId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MemberId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -44,6 +44,9 @@ namespace CleanMovie.Api.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("MemberId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ModifiedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -55,7 +58,7 @@ namespace CleanMovie.Api.Migrations
                     b.Property<int>("RentalId")
                         .HasColumnType("int");
 
-                    b.HasKey("MemberId");
+                    b.HasKey("Id");
 
                     b.HasIndex("RentalId");
 
@@ -64,11 +67,11 @@ namespace CleanMovie.Api.Migrations
 
             modelBuilder.Entity("CleanMovie.Domain.Movie", b =>
                 {
-                    b.Property<int>("MovieId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MovieId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -84,6 +87,9 @@ namespace CleanMovie.Api.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
                     b.Property<string>("MovieName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -94,7 +100,7 @@ namespace CleanMovie.Api.Migrations
                     b.Property<int>("RentalDuration")
                         .HasColumnType("int");
 
-                    b.HasKey("MovieId");
+                    b.HasKey("Id");
 
                     b.ToTable("Movies");
                 });
@@ -116,6 +122,9 @@ namespace CleanMovie.Api.Migrations
 
                     b.Property<DateTime>("DateModified")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("ModifiedBy")
                         .IsRequired()
@@ -150,6 +159,9 @@ namespace CleanMovie.Api.Migrations
 
                     b.Property<DateTime>("DateModified")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("ModifiedBy")
                         .IsRequired()

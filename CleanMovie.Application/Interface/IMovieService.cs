@@ -1,4 +1,5 @@
-﻿using CleanMovie.Domain;
+﻿using CleanMovie.Application.Contract.Dto.Movies;
+using CleanMovie.Domain;
 
 
 namespace CleanMovie.Application.Interface

@@ -17,7 +17,7 @@ namespace CleanMovie.Infrastructure.Data
                 .HasOne(s => s.Rental)
                 .WithMany(r => r.Members)
                 .HasForeignKey(s => s.RentalId);
-
+                
             //Many to Many (Rental and Movie)
             modelBuilder.Entity<MovieRental>()
                 .HasKey(g => new { g.RenatalId, g.MovieId });

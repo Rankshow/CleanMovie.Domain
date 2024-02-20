@@ -81,3 +81,4 @@ C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Api\obj\Release\net7.0\C
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Api\obj\Release\net7.0\ref\CleanMovie.Api.dll
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Api\obj\Release\net7.0\CleanMovie.Api.sourcelink.json
 C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Api\obj\Release\net7.0\CleanMovie.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\source\repos\CleanMovie.Domain\CleanMovie.Api\bin\Release\net7.0\AutoMapper.dll

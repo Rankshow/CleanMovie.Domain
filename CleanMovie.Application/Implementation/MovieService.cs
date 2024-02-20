@@ -1,8 +1,7 @@
 ﻿using CleanMovie.Application.Contract.Dto.Movies;
-using CleanMovie.Application.Contract.Extension;
 using CleanMovie.Application.Interface;
 using CleanMovie.Domain;
-using System.Runtime.CompilerServices;
+
 
 namespace CleanMovie.Application.Implementation
 {

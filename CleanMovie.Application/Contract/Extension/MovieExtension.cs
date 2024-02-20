@@ -5,7 +5,7 @@ namespace CleanMovie.Application.Contract.Extension
 {
     public static class MovieExtension
     {
-        public static Movie AsEntity(this CreateMovieRequest req)
+        public static Movie AsEntity(this CreateMovieDto req)
         {
             return new Movie()
             {
@@ -36,7 +36,16 @@ namespace CleanMovie.Application.Contract.Extension
             }
             return movieDtos;
         }
-       // public static Entit
+       public static Movie AsEntity(this UpdateCreateDto entity) 
+       {
+            return new Movie
+            {
+                Id = entity.Id,
+                MovieName = entity.MovieName,
+                RentalCost = entity.RentalCost,
+                RentalDuration = entity.RentalDuration,
+            };
+       }
 
     }
 }
